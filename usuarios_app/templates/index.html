@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Dojo Survey Index
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='./css/style.css') }}">
+    </head>
+    <body>
+        <form action="/process" method="POST">
+            <h1>
+                Encuesta Dojo
+            </h1>
+            <div>
+                <label for="name">
+                    Nombre:
+                </label> 
+                <input type="text" id="name" name="name" maxlength="16"/>
+            </div>
+            <div>
+                <label for="location">
+                    Ubicación del Dojo:
+                </label> 
+                <select id="location" name="location">
+                    <option value="">-- Selecciona una ciudad --</option>-->
+                    <option value="Lima">Lima</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Trujillo">Trujillo</option>
+                    <option value="Tacna">Tacna</option>
+                    <option value="Cuzco">Cuzco</option>
+                    <option value="Ica">Ica</option>
+                </select>
+            </div>
+            <div>
+                <label for="languaje">
+                    Lenguaje preferido:
+                </label> 
+                <select id="languaje" name="languaje">
+                    <option value="">-- Selecciona un lenguaje --</option>
+                    <option value="HTML">HTML</option>
+                    <option value="C/C++">C/C++</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </div>
+            <div>
+                <label for="comment">
+                    Comentario:
+                </label> 
+                <textarea placeholder="Escribe aqui tu comentario" id="comment" name="comment"></textarea>
+            </div>
+            <button type="submit">
+                Registrar
+            </button>
+        </form>
+    </body>
+</html>
